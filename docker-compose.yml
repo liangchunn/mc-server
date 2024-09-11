@@ -1,0 +1,25 @@
+version: "3.8"
+
+services:
+  mc:
+    image: itzg/minecraft-server
+    ports:
+      - "25565:25565"
+    environment:
+      VERSION: "1.21.1"
+      EULA: "TRUE"
+      INIT_MEMORY: "2G"
+      MAX_MEMORY: "6G"
+      MAX_PLAYERS: 10
+      TYPE: "FABRIC"
+      ONLINE_MODE: false
+      SERVER_NAME: "Naproxyl's Server"
+      MOTD: ":-)"
+      MODS_FILE: /extras/mods.txt
+      OPS: |
+        Naproxyl
+    volumes:
+      - ./data:/data
+      - ./mods.txt:/extras/mods.txt:ro
+    restart: unless-stopped
+        # https://cdn.modrinth.com/data/1u6JkXh5/versions/ZOhVauWn/worldedit-mod-7.3.0.jar
