@@ -2,7 +2,7 @@
 
 ## Server requirements
 
-- Docker Desktop or OrbStack (Mac)
+- [Docker Desktop](https://www.docker.com/products/docker-desktop/) or [OrbStack](https://orbstack.dev) (Mac)
 - [playit.gg](https://playit.gg) tunnel for exposing the server
 
 ### Running the server
